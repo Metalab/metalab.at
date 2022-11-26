@@ -53,6 +53,7 @@ body {
   background-color: white;
   font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
   font-size: 16pt;
+  min-width: 500px;
 }
 
 header {
@@ -62,7 +63,7 @@ header {
   background-size: cover;
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
 
-  padding: 5em;
+  padding: 3em;
 
   display: flex;
   justify-content: flex-end;
@@ -77,7 +78,7 @@ header > div {
 header img {
   width: 5em;
   height: 5em;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 
 header h1 {
