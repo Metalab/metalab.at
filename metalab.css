@@ -165,6 +165,10 @@ section > article {
   grid-area: text;
 }
 
+article p:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
 footer {
   margin: 2em;
 }
