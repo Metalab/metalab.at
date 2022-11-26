@@ -110,6 +110,7 @@ nav > ul {
   padding: 0.5em 1em;
   width: 100%;
   max-width: var(--max-width);
+  flex-wrap: wrap;
 }
 
 nav a {
