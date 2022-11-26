@@ -141,7 +141,7 @@ section {
 
 section:nth-child(even) {
   grid: ". heading" auto "image text" auto / 1fr 1fr;
-  background-color: #bbbbbb
+  background-color: #bbbbbb;
 }
 
 @media screen and (max-width: 850px) {
@@ -185,7 +185,7 @@ article p:not(:last-child) {
 }
 
 footer {
-  width: 100%;
+  width: calc(100% - 4em);
   max-width: var(--max-width);
   margin: 2em;
 }
