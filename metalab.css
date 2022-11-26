@@ -60,6 +60,7 @@ header {
   height: 30vw;
   background: local url(http://placekitten.com/1000/300) no-repeat center;
   background-size: cover;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
 
   padding: 5em;
 
