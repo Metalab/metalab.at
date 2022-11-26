@@ -140,6 +140,7 @@ section {
 
 section:nth-child(even) {
   grid: ". heading" auto "image text" auto / 1fr 1fr;
+  background-color: #bbbbbb
 }
 
 @media screen and (max-width: 850px) {
