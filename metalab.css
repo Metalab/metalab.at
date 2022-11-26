@@ -74,6 +74,12 @@ header > div {
   flex-direction: column;
 }
 
+header img {
+  width: 5em;
+  height: 5em;
+  margin-right: 1em;
+}
+
 header h1 {
   font-size: 50pt;
   color: yellow;
@@ -123,6 +129,14 @@ nav a {
 
 nav a:hover {
   background-color: blue;
+}
+
+nav li {
+  flex-grow: 0;
+}
+
+nav .spacer {
+  flex-grow: 1;
 }
 
 main {
