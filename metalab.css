@@ -30,6 +30,8 @@ ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+  margin-block: 0;
+  margin-inline: 0;
 }
 
 ol,
@@ -70,11 +72,13 @@ header {
   cursor: pointer;
 }
 
-header .heading {
+header > .heading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  padding-left: 0.3em;
-  z-index: 1;
 }
 
 header > .playpause {
@@ -99,13 +103,6 @@ header:hover > .playpause {
 
 header > .playpause > .playsymbol {
   display: none;
-}
-
-header img {
-  width: 5em;
-  height: 5em;
-  margin-left: 1em;
-  z-index: 1;
 }
 
 header video {
@@ -176,7 +173,12 @@ nav li {
   flex-grow: 0;
 }
 
-nav li img {
+nav li.atomic {
+  line-height: 0;
+  padding: 0 0.5em 0 0;
+}
+
+nav li.atomic img {
   height: 1.5em;
 }
 
@@ -196,16 +198,16 @@ main {
 section {
   display: grid;
   grid:
-    "heading ." auto "text image" auto /
+    "heading image" auto "text image" 1fr /
     min(50%, var(--max-column-width)) min(50%, var(--max-column-width));
-  gap: 2em;
+  gap: 1em 2em;
   padding: 2em;
   justify-content: center;
 }
 
 section:nth-child(even) {
   grid:
-    ". heading" auto "image text" auto /
+    "image heading" auto "image text" 1fr /
     min(50%, var(--max-column-width)) min(50%, var(--max-column-width));
   background-color: #bbb;
 }
@@ -264,8 +266,12 @@ section > .text p:not(:last-child) {
   }
   header {
     background-color: black;
+    cursor: auto;
   }
-  header > .reducedmotion {
-    display: block;
+  header > .heading.reducedmotion {
+    display: flex;
+  }
+  header > .playpause {
+    display: none;
   }
 }
