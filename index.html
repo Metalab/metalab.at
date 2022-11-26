@@ -11,6 +11,10 @@
 
 <body>
     <header>
+        <video autoplay loop muted playsinline>
+            <source src="/videos/header_very_low.mp4" type="video/mp4">
+            Here would be a video of the Metalab entrance.
+        </video>
         <div>
             <h1>metalab</h1>
             <h2>Hackspace in the Heart of Vienna</h2>
@@ -197,6 +201,18 @@
             <img src="images/map.svg" alt="Map">
         </section>
     </main>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('header > video');
+            video.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
