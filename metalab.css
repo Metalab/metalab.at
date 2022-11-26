@@ -129,20 +129,26 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+
+  --max-column-width: calc(var(--max-width) / 2 - 2em);
 }
 
 section {
-  max-width: var(--max-width);
   display: grid;
-  grid: "heading ." auto "text image" auto / 1fr 1fr;
+  grid:
+    "heading ." auto "text image" auto /
+    min(50%, var(--max-column-width)) min(50%, var(--max-column-width));
   gap: 2em;
-  padding: 2em 2em;
+  padding: 2em;
+  justify-content: center;
 }
 
 section:nth-child(even) {
-  grid: ". heading" auto "image text" auto / 1fr 1fr;
-  background-color: #bbbbbb;
+  grid:
+    ". heading" auto "image text" auto /
+    min(50%, var(--max-column-width)) min(50%, var(--max-column-width));
+  background-color: #bbb;
 }
 
 @media screen and (max-width: 850px) {
