@@ -176,7 +176,7 @@ section:nth-child(even) {
   }
 }
 
-section > h5 {
+section > h3 {
   grid-area: heading;
   font-size: 30pt;
 }
@@ -198,20 +198,10 @@ section > .calendar-content {
   background-color: cadetblue;
 }
 
-section > article {
+section > .text {
   grid-area: text;
 }
 
-article p:not(:last-child) {
+section > .text p:not(:last-child) {
   margin-bottom: 0.5em;
-}
-
-footer {
-  width: calc(100% - 4em);
-  max-width: var(--max-width);
-  margin: 2em;
-}
-
-footer h5 {
-  font-size: 30pt;
 }
