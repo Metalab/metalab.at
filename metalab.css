@@ -234,6 +234,12 @@ section > .calendar-content {
   background-color: cadetblue;
 }
 
+section > iframe {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+}
+
 section > .text {
   grid-area: text;
 }
