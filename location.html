@@ -10,84 +10,89 @@
 </head>
 
 <body>
-    <header>
-        <video autoplay loop muted playsinline poster="images/header.webp">
-            <source src="/videos/header.mp4" type="video/mp4">
-            <div class="heading">
-                <h1>metalab</h1>
-                <h2>Hackspace in the Heart of Vienna</h2>
-            </div>
-        </video>
-        <img class="heading reducedmotion" src="images/header.webp" alt="Picture of the entrance to Metalab.">
-        <div class="playpause">
-            <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
-                <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
+    <div class="content">
+        <header>
+            <video autoplay loop muted playsinline poster="images/header.webp">
+                <source src="/videos/header.mp4" type="video/mp4">
+                <div class="heading">
+                    <h1>metalab</h1>
+                    <h2>Hackspace in the Heart of Vienna</h2>
+                </div>
+            </video>
+            <img class="heading reducedmotion" src="images/header.webp" alt="Picture of the entrance to Metalab.">
+            <div class="playpause">
+                <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
+                    <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C220.779,136.094,212.211,127.525,201.654,127.525z" />
-                <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
+                    <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C327.573,136.094,318.929,127.525,308.448,127.525z" />
-                <path d="M239.062,0C107.023,0,0,107.023,0,239.062s107.023,239.062,239.062,239.062s239.062-107.023,239.062-239.062
+                    <path d="M239.062,0C107.023,0,0,107.023,0,239.062s107.023,239.062,239.062,239.062s239.062-107.023,239.062-239.062
                 S371.102,0,239.062,0z M239.292,409.811c-94.171,0-170.519-76.424-170.519-170.519S145.197,68.773,239.292,68.773
                 c94.095,0,170.519,76.424,170.519,170.519S333.54,409.811,239.292,409.811z" />
-            </svg>
-            <svg class="playsymbol" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
-                <path d="M142.411,68.9C141.216,31.48,110.968,1.233,73.549,0.038c-20.361-0.646-39.41,7.104-53.488,21.639
+                </svg>
+                <svg class="playsymbol" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+                    <path d="M142.411,68.9C141.216,31.48,110.968,1.233,73.549,0.038c-20.361-0.646-39.41,7.104-53.488,21.639
                     C6.527,35.65-0.584,54.071,0.038,73.549c1.194,37.419,31.442,67.667,68.861,68.861c0.779,0.025,1.551,0.037,2.325,0.037
                     c19.454,0,37.624-7.698,51.163-21.676C135.921,106.799,143.033,88.377,142.411,68.9z M111.613,110.336
                     c-10.688,11.035-25.032,17.112-40.389,17.112c-0.614,0-1.228-0.01-1.847-0.029c-29.532-0.943-53.404-24.815-54.348-54.348
                     c-0.491-15.382,5.122-29.928,15.806-40.958c10.688-11.035,25.032-17.112,40.389-17.112c0.614,0,1.228,0.01,1.847,0.029
                     c29.532,0.943,53.404,24.815,54.348,54.348C127.91,84.76,122.296,99.306,111.613,110.336z" />
-                <path d="M94.585,67.086L63.001,44.44c-3.369-2.416-8.059-0.008-8.059,4.138v45.293
+                    <path d="M94.585,67.086L63.001,44.44c-3.369-2.416-8.059-0.008-8.059,4.138v45.293
                     c0,4.146,4.69,6.554,8.059,4.138l31.583-22.647C97.418,73.331,97.418,69.118,94.585,67.086z" />
-            </svg>
-        </div>
-    </header>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li class="atomic"><img src="images/atomic.svg"
-                    alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <!-- <li><a href="events.html">Events</a></li> -->
-            <li><a href="location.html" class="active">Location</a></li>
-            <li><a href="https://dome.metalab.at">The Dome</a></li>
-            <li><a href="https://metalab.at/wiki/Impressum">Imprint</a></li>
-            <li><a href="https://metalab.at/wiki/Code_of_Conduct/en">Code of Conduct</a></li>
-            <li><a href="https://metalab.at">Regulars Area</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h3>Visit Us!</h3>
-            <div class="text">
-                <p>
-                    Metalab is located at <strong>Rathausstraße 6</strong> in the first district of Vienna, Austria,
-                    Europe.
-                </p>
-                <p>Vienna is not suitable for cars, so please come here using public transportation (in ascending order
-                    of walking distance):</p>
-                <p>
-                <ul>
-                    <li>Metro lines U2 and U5, tram line 2 at station <em>Rathaus</em></li>
-                    <li>Tram lines U2Z, 1, 71, D at station <em>Parlament</em></li>
-                    <li>Tram line 46 at station <em>Auerspergstraße</em></li>
-                    <li>Metro line U3 at station <em>Volkstheater</em></li>
-                    <li>Tram lines 37, 38, 40, 41, 42, 43, 44 station <em>Schottentor</em></li>
-                </ul>
-                </p>
-                <p>Alternatively, there are also a few bicycle parking spots in the immediate vicinity.</p>
+                </svg>
             </div>
-            <figure>
-                <iframe title="Interactive map showing the location of Metalab" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
-                    style="border: 1px solid black"></iframe>
-                <figcaption>Area Plan Around Metalab [<a
-                        href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
-                        Larger Map</a>]</figcaption>
-            </figure>
-        </section>
-    </main>
+        </header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li class="atomic"><img src="images/atomic.svg"
+                        alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <!-- <li><a href="events.html">Events</a></li> -->
+                <li><a href="location.html" class="active">Location</a></li>
+                <li><a href="https://metalab.at/calendar/">Calendar</a></li>
+                <li><a href="https://dome.metalab.at">The Dome</a></li>
+                <li><a href="https://metalab.at/wiki/Code_of_Conduct/en">Code of Conduct</a></li>
+                <li><a href="https://metalab.at">Regulars Area</a></li>
+                <li><a href="https://metalab.at/wiki/Impressum">Imprint</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Visit Us!</h3>
+                <div class="text">
+                    <p>
+                        Metalab is located at <strong>Rathausstraße 6</strong> in the first district of Vienna, Austria,
+                        Europe.
+                    </p>
+                    <p>Vienna is not suitable for cars, so please come here using public transportation (in ascending
+                        order
+                        of walking distance):</p>
+                    <p>
+                    <ul>
+                        <li>Metro lines U2 and U5, tram line 2 at station <em>Rathaus</em></li>
+                        <li>Tram lines U2Z, 1, 71, D at station <em>Parlament</em></li>
+                        <li>Tram line 46 at station <em>Auerspergstraße</em></li>
+                        <li>Metro line U3 at station <em>Volkstheater</em></li>
+                        <li>Tram lines 37, 38, 40, 41, 42, 43, 44 station <em>Schottentor</em></li>
+                    </ul>
+                    </p>
+                    <p>Alternatively, there are also a few bicycle parking spots in the immediate vicinity.</p>
+                </div>
+                <figure>
+                    <iframe title="Interactive map showing the location of Metalab" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
+                        style="border: 1px solid black"></iframe>
+                    <figcaption>Area Plan Around Metalab [<a
+                            href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
+                            Larger Map</a>]</figcaption>
+                </figure>
+            </section>
+        </main>
+    </div>
+    <footer>©2022 Metalab. Created in <a href='http://vanilla-js.com/'>Vanilla JS</a>.</footer>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const video = document.querySelector('header > video');

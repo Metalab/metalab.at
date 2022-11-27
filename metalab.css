@@ -62,6 +62,20 @@ a {
   color: var(--color-6);
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
 body {
   background-color: var(--color-2);
   font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
@@ -241,6 +255,11 @@ section > figure {
   width: 100%;
 }
 
+.transparent {
+  background-color: var(--color-7);
+  border-radius: 2px;
+}
+
 .calendar-content {
   margin-bottom: 0.3em;
 }
@@ -289,6 +308,21 @@ section > .text p:not(:last-child) {
 section > .text ul {
   list-style: disc;
   margin-left: 1em;
+}
+
+footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 3em;
+  font-size: 10pt;
+  background-color: var(--color-5);
+  color: var(--color-1);
+  padding: 0.3em;
+}
+
+footer a {
+  color: var(--color-3);
 }
 
 @media screen and (max-width: 850px) {

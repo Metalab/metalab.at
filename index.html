@@ -10,247 +10,274 @@
 </head>
 
 <body>
-    <header>
-        <video autoplay loop muted playsinline poster="images/header.webp">
-            <source src="/videos/header.mp4" type="video/mp4">
-            <div class="heading">
-                <h1>metalab</h1>
-                <h2>Hackspace in the Heart of Vienna</h2>
-            </div>
-        </video>
-        <img class="heading reducedmotion" src="images/header.webp" alt="Picture of the entrance to Metalab.">
-        <div class="playpause">
-            <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
-                <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
+    <div class="content">
+        <header>
+            <video autoplay loop muted playsinline poster="images/header.webp">
+                <source src="/videos/header.mp4" type="video/mp4">
+                <div class="heading">
+                    <h1>metalab</h1>
+                    <h2>Hackspace in the Heart of Vienna</h2>
+                </div>
+            </video>
+            <img class="heading reducedmotion" src="images/header.webp" alt="Picture of the entrance to Metalab.">
+            <div class="playpause">
+                <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
+                    <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C220.779,136.094,212.211,127.525,201.654,127.525z" />
-                <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
+                    <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C327.573,136.094,318.929,127.525,308.448,127.525z" />
-                <path d="M239.062,0C107.023,0,0,107.023,0,239.062s107.023,239.062,239.062,239.062s239.062-107.023,239.062-239.062
+                    <path d="M239.062,0C107.023,0,0,107.023,0,239.062s107.023,239.062,239.062,239.062s239.062-107.023,239.062-239.062
                 S371.102,0,239.062,0z M239.292,409.811c-94.171,0-170.519-76.424-170.519-170.519S145.197,68.773,239.292,68.773
                 c94.095,0,170.519,76.424,170.519,170.519S333.54,409.811,239.292,409.811z" />
-            </svg>
-            <svg class="playsymbol" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
-                <path d="M142.411,68.9C141.216,31.48,110.968,1.233,73.549,0.038c-20.361-0.646-39.41,7.104-53.488,21.639
+                </svg>
+                <svg class="playsymbol" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+                    <path d="M142.411,68.9C141.216,31.48,110.968,1.233,73.549,0.038c-20.361-0.646-39.41,7.104-53.488,21.639
                     C6.527,35.65-0.584,54.071,0.038,73.549c1.194,37.419,31.442,67.667,68.861,68.861c0.779,0.025,1.551,0.037,2.325,0.037
                     c19.454,0,37.624-7.698,51.163-21.676C135.921,106.799,143.033,88.377,142.411,68.9z M111.613,110.336
                     c-10.688,11.035-25.032,17.112-40.389,17.112c-0.614,0-1.228-0.01-1.847-0.029c-29.532-0.943-53.404-24.815-54.348-54.348
                     c-0.491-15.382,5.122-29.928,15.806-40.958c10.688-11.035,25.032-17.112,40.389-17.112c0.614,0,1.228,0.01,1.847,0.029
                     c29.532,0.943,53.404,24.815,54.348,54.348C127.91,84.76,122.296,99.306,111.613,110.336z" />
-                <path d="M94.585,67.086L63.001,44.44c-3.369-2.416-8.059-0.008-8.059,4.138v45.293
+                    <path d="M94.585,67.086L63.001,44.44c-3.369-2.416-8.059-0.008-8.059,4.138v45.293
                     c0,4.146,4.69,6.554,8.059,4.138l31.583-22.647C97.418,73.331,97.418,69.118,94.585,67.086z" />
-            </svg>
-        </div>
-    </header>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li class="atomic"><img src="images/atomic.svg"
-                    alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <!-- <li><a href="events.html">Events</a></li> -->
-            <li><a href="location.html">Location</a></li>
-            <li><a href="https://dome.metalab.at">The Dome</a></li>
-            <li><a href="https://metalab.at/wiki/Impressum">Imprint</a></li>
-            <li><a href="https://metalab.at/wiki/Code_of_Conduct/en">Code of Conduct</a></li>
-            <li><a href="https://metalab.at">Regulars Area</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h3>Metalab</h3>
-            <div class="text">
-                <p>
-                    Metalab is a space where you can pursue your curiosity, realize unique ideas or meet and exchange
-                    with others. As Vienna's oldest and largest hackerspace, Metalab offers an atmosphere where people
-                    of all skill levels interested in art, technology, society, and sciences come together to share
-                    knowledge and work on personal and collaborative projects.
-                </p>
+                </svg>
             </div>
-            <img src="images/otterspace_main.webp" alt="People in Otter Space laughing">
-        </section>
-        <section>
-            <h3>What is a Hackspace?</h3>
-            <div class="text">
-                <p>
-                    As an activity, hacking is not just restricted to breaking into computer systems. Before Hollywood
-                    hijacked the term for underwhelming action movies, hacking meant using knowledge and curiosity to
-                    overcome technical and creative challenges. Many things, be it software systems, clothing, hardware,
-                    or even your body, can and should be hacked.
-                </p>
-                <p>
-                    A hackspace is a community-operated workspace where hackers with common interests can meet, exchange
-                    knowledge and work on projects with their peers.
-                </p>
-            </div>
-            <img src="images/hackspace.webp" alt="Metalab view from the street.">
-        </section>
-        <section>
-            <h3>Creativity and Knowledge</h3>
-            <div class="text">
-                <p>
-                    Metalab lives and thrives off its members and community, allowing for horizontal knowledge transfer.
-                    You can find groups interested in programming, network technology, ham radio, electronics, robotics,
-                    art, activism, and inclusivity.
-                </p>
-                <p>
-                    Interest groups meet for regular meetups and workshops, offering talks and hands-on experience.
-                    These events are usually open to the public and free of charge.
-                </p>
-            </div>
-            <img src="images/creativity.webp" alt="A person working on analog cameras in front of a notebook.">
-        </section>
-        <section>
-            <h3>Events</h3>
-            <div class="text">
-                <p>
-                    Members and guests often host events, lectures, workshops, and meetups, most of which can be visited
-                    without registering. Here is a calendar of the upcoming public events at Metalab. Feel free to check
-                    them out and see if something piques your interest.
-                </p>
-            </div>
-            <figure title="The Metalab calendar">
-                <div class="calendar-content">
-                    <ul>
-                        <li>
-                            <div id="calendarcontainer6490">
-                                <p class="event event" id="calendar-view-6490">
-                                    <span class="event_date">Fri 25.11.2022 18:00 - 23:59 </span>
-                                    <a href="/wiki/Open_day"> <span class="name">Open Day</span></a>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="calendarcontainer6405">
-                                <p class="event event" id="calendar-view-6405">
-                                    <span class="event_date">Fri 25.11.2022 18:30 - Sun 27.11.2022 22:00 </span>
-                                    <a href="/wiki/Hackathon_0x14"> <span class="name">Hackathon 0x14</span></a>
-                                    <span class="teaser">Hacken was das Zeug hält!</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="calendarcontainer6510">
-                                <p class="event event" id="calendar-view-6510">
-                                    <span class="event_date">Sat 26.11.2022 15:00 - 17:00 </span>
-                                    <a href="/wiki/Lounge"> <span class="name">Lounge Planungstreffen</span></a>
-                                    <span class="teaser">Lounge/Umbau22</span>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="calendarcontainer6364">
-                                <p class="event event" id="calendar-view-6364">
-                                    <span class="event_date">Sat 26.11.2022 18:00 - 20:00 </span>
-                                    <a href="/wiki/Esperanto_Meetups"> <span class="name">Esperanto-Meetup</span></a>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="calendarcontainer6469">
-                                <p class="event event" id="calendar-view-6469">
-                                    <span class="event_date">Wed 30.11.2022 18:00 - 22:00 </span>
-                                    <a href="/wiki/ÖGS_MeetUp"> <span class="name">ÖGS Meet Up</span></a>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+        </header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li class="atomic"><img src="images/atomic.svg"
+                        alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <!-- <li><a href="events.html">Events</a></li> -->
+                <li><a href="location.html">Location</a></li>
+                <li><a href="https://metalab.at/calendar/">Calendar</a></li>
+                <li><a href="https://dome.metalab.at">The Dome</a></li>
+                <li><a href="https://metalab.at/wiki/Code_of_Conduct/en">Code of Conduct</a></li>
+                <li><a href="https://metalab.at">Regulars Area</a></li>
+                <li><a href="https://metalab.at/wiki/Impressum">Imprint</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Metalab</h3>
+                <div class="text">
+                    <p>
+                        Metalab is a space where you can pursue your curiosity, realize unique ideas or meet and
+                        exchange
+                        with others. As Vienna's oldest and largest hackerspace, Metalab offers an atmosphere where
+                        people
+                        of all skill levels interested in art, technology, society, and sciences come together to share
+                        knowledge and work on personal and collaborative projects.
+                    </p>
                 </div>
-                <figcaption>Important events from our calendar. You can also visit <a
-                        href='https://metalab.at/calendar/'>the dedicated calendar page</a> for future events.
-                </figcaption>
-            </figure>
-        </section>
-        <section>
-            <h3>Inclusivity and Accessibility</h3>
-            <div class="text">
-                <p>
-                    Metalab is an inclusive community where everyone is welcome regardless of age, ethnicity, gender,
-                    sexuality, income, or religion. We aim to provide an environment of mutual respect, tolerance, and
-                    encouragement.
-                </p>
-                <p>
-                    Metalab collaborates with <a href="https://defineblind.at">Define</a> and <a
-                        href="https://machs-auf.at">MACH'S AUF!</a> to make the space more inclusive towards Deaf,
-                    blind, and visually impaired people.
-                </p>
-                <p>
-                    Unfortunately, the space is not fully wheelchair accessible since there are a few steps at the
-                    entrance and one in front of the toilets.
-                </p>
-            </div>
-            <figure aria-label="Introduction to Metalab in Austrian Sign Language.">
-                <video muted playsinline controls poster="images/mach_s_auf_poster.webp">
-                    <source src="videos/mach_s_auf_introduction_720p.mp4" type="video/mp4">
-                    You can watch the sign language introduction to Metalab <a
-                        href="https://www.youtube.com/watch?v=7S8ZVDvWld0">on YouTube</a>.
-                </video>
-                <figcaption aria-hidden="true">Introduction to Metalab in ÖGS (Austrian Sign Language).</figcaption>
-            </figure>
-        </section>
-        <section>
-            <h3>Tools and Infrastructure</h3>
-            <div class="text">
-                <p>
-                    We have many tools and machines, including a laser cutter, 3D printers, a CNC mill, a lathe, sewing
-                    machines, a vinyl plotter, and a well-stocked electronics laboratory. All of our tools can be used
-                    by guests but may require supervision. If you want to use tools like the 3D printer, CNC, or laser
-                    cutter, don’t hesitate to contact <a href='mailto:core@metalab.at'>core@metalab.at</a> to find a
-                    date when someone can supervise/help you.
-                </p>
-            </div>
-            <img src="images/infrastructure.webp" alt="Two people standing in front of a 3D printer.">
-        </section>
-        <section>
-            <h3>What Does It Cost?</h3>
-            <div class="text">
-                <p>
-                    Many tools and machines are free to use, though we are always happy about donations for materials
-                    and maintenance. The main exception is our laser cutter, billed at €1.50/min of cutting time.
-                </p>
-                <p>
-                    Our space is mainly financed through memberships. You are not required to be a member to use the
-                    space and host events, but it is encouraged if you visit regularly. Reduced membership fees are
-                    available for students and people in a financially precarious situations.
-                </p>
-            </div>
-            <img src="images/costs.webp" alt="Donation box on a table at Metalab.">
-        </section>
-        <section>
-            <h3>Visit Us!</h3>
-            <div class="text">
-                <p>
-                    Metalab is generally open every day after 6pm and often earlier if at least one member is in the
-                    space.
-                </p>
-                <p>
-                    For your first visit, we recommend coming during one of our regular open days (held on the second
-                    Thursday and fourth Friday of each month). During the open day, people will always be happy to
-                    provide a tour of the space and help you use our machines. Alternatively, you can also visit during
-                    MetaInvasion day, when the space is exclusively open to women, agender, inter, non-binary, and trans
-                    people, as well as people who are still questioning their gender.
-                </p>
-                <p>
-                    If you have any questions, feel free to contact us per e-mail at <a
-                        href='mailto:core@metalab.at'>core@metalab.at</a>,
-                    call us at <a href='tel:+43720002323'>+43 720 002323</a>,
-                    or visit us at <strong>Rathausstraße 6, 1010 Vienna</strong>.
-                </p>
-                <p>
-                    You can also look at the detailed description on the <a href='location.html'>Location page</a>.
-                </p>
-            </div>
-            <figure>
-                <iframe title="Interactive map showing the location of Metalab" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
-                    style="border: 1px solid black"></iframe>
-                <figcaption>Area Plan Around Metalab [<a
-                        href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
-                        Larger Map</a>]</figcaption>
-            </figure>
-        </section>
-    </main>
+                <img src="images/otterspace_main.webp" alt="People in Otter Space laughing">
+            </section>
+            <section>
+                <h3>What is a Hackspace?</h3>
+                <div class="text">
+                    <p>
+                        As an activity, hacking is not just restricted to breaking into computer systems. Before
+                        Hollywood
+                        hijacked the term for underwhelming action movies, hacking meant using knowledge and curiosity
+                        to
+                        overcome technical and creative challenges. Many things, be it software systems, clothing,
+                        hardware,
+                        or even your body, can and should be hacked.
+                    </p>
+                    <p>
+                        A hackspace is a community-operated workspace where hackers with common interests can meet,
+                        exchange
+                        knowledge and work on projects with their peers.
+                    </p>
+                </div>
+                <img src="images/hackspace.webp" alt="Metalab view from the street.">
+            </section>
+            <section>
+                <h3>Creativity and Knowledge</h3>
+                <div class="text">
+                    <p>
+                        Metalab lives and thrives off its members and community, allowing for horizontal knowledge
+                        transfer.
+                        You can find groups interested in programming, network technology, ham radio, electronics,
+                        robotics,
+                        art, activism, and inclusivity.
+                    </p>
+                    <p>
+                        Interest groups meet for regular meetups and workshops, offering talks and hands-on experience.
+                        These events are usually open to the public and free of charge.
+                    </p>
+                </div>
+                <img src="images/creativity.webp" alt="A person working on analog cameras in front of a notebook.">
+            </section>
+            <section>
+                <h3>Events</h3>
+                <div class="text">
+                    <p>
+                        Members and guests often host events, lectures, workshops, and meetups, most of which can be
+                        visited
+                        without registering. Here is a calendar of the upcoming public events at Metalab. Feel free to
+                        check
+                        them out and see if something piques your interest.
+                    </p>
+                </div>
+                <figure title="The Metalab calendar">
+                    <div class="calendar-content">
+                        <ul>
+                            <li>
+                                <div id="calendarcontainer6490">
+                                    <p class="event event" id="calendar-view-6490">
+                                        <span class="event_date">Fri 25.11.2022 18:00 - 23:59 </span>
+                                        <a href="/wiki/Open_day"> <span class="name">Open Day</span></a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="calendarcontainer6405">
+                                    <p class="event event" id="calendar-view-6405">
+                                        <span class="event_date">Fri 25.11.2022 18:30 - Sun 27.11.2022 22:00 </span>
+                                        <a href="/wiki/Hackathon_0x14"> <span class="name">Hackathon 0x14</span></a>
+                                        <span class="teaser">Hacken was das Zeug hält!</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="calendarcontainer6510">
+                                    <p class="event event" id="calendar-view-6510">
+                                        <span class="event_date">Sat 26.11.2022 15:00 - 17:00 </span>
+                                        <a href="/wiki/Lounge"> <span class="name">Lounge Planungstreffen</span></a>
+                                        <span class="teaser">Lounge/Umbau22</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="calendarcontainer6364">
+                                    <p class="event event" id="calendar-view-6364">
+                                        <span class="event_date">Sat 26.11.2022 18:00 - 20:00 </span>
+                                        <a href="/wiki/Esperanto_Meetups"> <span
+                                                class="name">Esperanto-Meetup</span></a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="calendarcontainer6469">
+                                    <p class="event event" id="calendar-view-6469">
+                                        <span class="event_date">Wed 30.11.2022 18:00 - 22:00 </span>
+                                        <a href="/wiki/ÖGS_MeetUp"> <span class="name">ÖGS Meet Up</span></a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <figcaption>Important events from our calendar. You can also visit <a
+                            href='https://metalab.at/calendar/'>the dedicated calendar page</a> for future events.
+                    </figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Inclusivity and Accessibility</h3>
+                <div class="text">
+                    <p>
+                        We consider ourselves an inclusive community where everyone is welcome regardless of age,
+                        ethnicity,
+                        gender, sexuality, income, or religion. We aim to provide an environment of mutual respect,
+                        tolerance, and encouragement.
+                    </p>
+                    <p>
+                        Metalab collaborates with <a href="https://defineblind.at">Define</a> and <a
+                            href="https://machs-auf.at">MACH'S AUF!</a> to make the space more inclusive towards Deaf,
+                        blind, and visually impaired people.
+                    </p>
+                    <p>
+                        Unfortunately, the space is not fully wheelchair accessible because there is a small staircase
+                        at
+                        the entrance and in front of the restroom.
+                    </p>
+                </div>
+                <figure aria-label="Introduction to Metalab in Austrian Sign Language.">
+                    <video muted playsinline controls poster="images/mach_s_auf_poster.webp">
+                        <source src="videos/mach_s_auf_introduction_720p.mp4" type="video/mp4">
+                        You can watch the sign language introduction to Metalab <a
+                            href="https://www.youtube.com/watch?v=7S8ZVDvWld0">on YouTube</a>.
+                    </video>
+                    <figcaption aria-hidden="true">Introduction to Metalab in ÖGS (Austrian Sign Language).</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Tools and Infrastructure</h3>
+                <div class="text">
+                    <p>
+                        We have many tools and machines, including a laser cutter, 3D printers, a CNC mill, a lathe,
+                        sewing
+                        machines, a vinyl plotter, and a well-stocked electronics laboratory. All of our tools can be
+                        used
+                        by guests but may require supervision. If you want to use tools like the 3D printer, CNC, or
+                        laser
+                        cutter, don’t hesitate to contact <a href='mailto:core@metalab.at'>core@metalab.at</a> to find a
+                        date when someone can supervise/help you.
+                    </p>
+                </div>
+                <img src="images/infrastructure.webp" alt="Two people standing in front of a 3D printer.">
+            </section>
+            <section>
+                <h3>What Does It Cost?</h3>
+                <div class="text">
+                    <p>
+                        Our space is mainly financed through memberships. You are not required to be a member to use the
+                        space and host events, but it is encouraged if you visit regularly. The standard rate for
+                        memberships is €30, reduced membership fees are available for students and people in a
+                        financially
+                        precarious situations.
+                    </p>
+                    <p>
+                        Many tools and machines are free to use, though we are always happy about donations for
+                        materials
+                        and maintenance. The main exception is our laser cutter, billed at €1.50/min of cutting time.
+                    </p>
+                </div>
+                <img src="images/costs.webp" alt="Donation box on a table at Metalab.">
+            </section>
+            <section>
+                <h3>Visit Us!</h3>
+                <div class="text">
+                    <p>
+                        Metalab is generally open every day after 6pm and often earlier if at least one member is in the
+                        space.
+                    </p>
+                    <p>
+                        For your first visit, we recommend coming during one of our regular open days (held on the
+                        second
+                        Thursday and fourth Friday of each month). During the open day, people will always be happy to
+                        provide a tour of the space and help you use our machines. Alternatively, you can also visit
+                        during
+                        <a href='https://metalab.at/wiki/MetaInvasion'>MetaInvasion day</a>, when the space is
+                        exclusively
+                        open to women, agender, inter, non-binary, and trans
+                        people, as well as people who are still questioning their gender.
+                    </p>
+                    <p>
+                        If you have any questions, feel free to contact us per e-mail at <a
+                            href='mailto:core@metalab.at'>core@metalab.at</a>,
+                        call us at <a href='tel:+43720002323'>+43 720 002323</a>,
+                        or visit us at <strong>Rathausstraße 6, 1010 Vienna</strong>.
+                    </p>
+                    <p>
+                        You can also look at the detailed description on the <a href='location.html'>Location page</a>.
+                    </p>
+                </div>
+                <figure>
+                    <iframe title="Interactive map showing the location of Metalab" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
+                        style="border: 1px solid black"></iframe>
+                    <figcaption>Area Plan Around Metalab [<a
+                            href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
+                            Larger Map</a>]</figcaption>
+                </figure>
+            </section>
+        </main>
+    </div>
+    <footer>©2022 Metalab. Created in <a href='http://vanilla-js.com/'>Vanilla JS</a>.</footer>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const video = document.querySelector('header > video');
