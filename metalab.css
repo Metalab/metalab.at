@@ -1,7 +1,17 @@
 :root {
   --footer-height: 2em;
   --padding: 1em;
-  --max-width: 1300px;
+  --max-width: 1285px;
+
+  --color-text: #ccc;
+  --color-1: #0b0835ff;
+  --color-2: #2e134aff;
+  --color-3: #901005ff;
+  --color-4: #c1340aff;
+  --color-5: #f2570fff;
+  --color-6: #f2710fff;
+  --color-7: #f28c0fff;
+  --color-8: #f4a039ff;
 }
 
 /* CSS RESET */
@@ -49,14 +59,15 @@ img {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: var(--color-6);
 }
 
 body {
-  background-color: white;
+  background-color: var(--color-2);
   font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
   font-size: 16pt;
   min-width: 300px;
+  color: var(--color-text);
 }
 
 header {
@@ -139,7 +150,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  background-color: aqua;
+  background-color: var(--color-5);
   display: flex;
   justify-content: center;
   box-shadow: 0 3px 3px black;
@@ -160,14 +171,20 @@ nav > ul {
 
 nav a {
   text-decoration: none;
-  color: black;
-  padding: 0.5em;
+  color: var(--color-1);
+  padding: 0.2em 0.4em;
+  margin: 0.3em 0.1em;
   background-color: transparent;
   transition: background-color ease-in-out 0.2s;
+  border-radius: 1em;
 }
 
 nav a:hover {
-  background-color: blue;
+  background-color: var(--color-8);
+}
+
+nav a.active {
+  background-color: var(--color-7);
 }
 
 nav li {
@@ -210,7 +227,7 @@ section:nth-child(even) {
   grid:
     "image heading" auto "image text" 1fr /
     min(50%, var(--max-column-width)) min(50%, var(--max-column-width));
-  background-color: #bbb;
+  background-color: var(--color-1);
 }
 
 section > h3 {
@@ -219,27 +236,31 @@ section > h3 {
 }
 
 section > img,
-section > .calendar-content {
+section > figure {
   grid-area: image;
   width: 100%;
 }
 
+.calendar-content {
+  margin-bottom: 0.3em;
+}
+
 .calendar-content > ul {
-  background-color: aquamarine;
+  background-color: var(--color-6);
   padding: 0.1em;
   list-style: none;
+  border-radius: 2px;
+  box-shadow: 0 0 4px black;
 }
 
 .calendar-content ul > li .event {
   margin: 0.1em;
-  background-color: cadetblue;
+  padding: 0.2em;
+  background-color: var(--color-2);
 }
 
-section > figure {
-  grid-area: image;
-  width: 100%;
-  height: 100%;
-  min-height: 370px;
+.calendar-content ul > li:nth-child(even) .event {
+  background-color: var(--color-1);
 }
 
 figure > iframe {
@@ -252,12 +273,22 @@ figure > figcaption {
   font-size: 10pt;
 }
 
+figure > video {
+  width: 100%;
+  box-shadow: 0 0 4px black;
+}
+
 section > .text {
   grid-area: text;
 }
 
 section > .text p:not(:last-child) {
   margin-bottom: 0.5em;
+}
+
+section > .text ul {
+  list-style: disc;
+  margin-left: 1em;
 }
 
 @media screen and (max-width: 850px) {
