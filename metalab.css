@@ -282,6 +282,12 @@ section > figure {
   background-color: var(--color-1);
 }
 
+.calendar-content ul > li .event > span:not(:last-child):after,
+.calendar-content ul > li .event > span:last-child:before {
+  content: "|";
+  padding: 0 0.1em;
+}
+
 figure > iframe {
   width: 100%;
   height: 100%;

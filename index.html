@@ -123,51 +123,7 @@
                 </div>
                 <figure title="The Metalab calendar">
                     <div class="calendar-content">
-                        <ul>
-                            <li>
-                                <div id="calendarcontainer6490">
-                                    <p class="event event" id="calendar-view-6490">
-                                        <span class="event_date">Fri 25.11.2022 18:00 - 23:59 </span>
-                                        <a href="/wiki/Open_day"> <span class="name">Open Day</span></a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div id="calendarcontainer6405">
-                                    <p class="event event" id="calendar-view-6405">
-                                        <span class="event_date">Fri 25.11.2022 18:30 - Sun 27.11.2022 22:00 </span>
-                                        <a href="/wiki/Hackathon_0x14"> <span class="name">Hackathon 0x14</span></a>
-                                        <span class="teaser">Hacken was das Zeug hält!</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div id="calendarcontainer6510">
-                                    <p class="event event" id="calendar-view-6510">
-                                        <span class="event_date">Sat 26.11.2022 15:00 - 17:00 </span>
-                                        <a href="/wiki/Lounge"> <span class="name">Lounge Planungstreffen</span></a>
-                                        <span class="teaser">Lounge/Umbau22</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div id="calendarcontainer6364">
-                                    <p class="event event" id="calendar-view-6364">
-                                        <span class="event_date">Sat 26.11.2022 18:00 - 20:00 </span>
-                                        <a href="/wiki/Esperanto_Meetups"> <span
-                                                class="name">Esperanto-Meetup</span></a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div id="calendarcontainer6469">
-                                    <p class="event event" id="calendar-view-6469">
-                                        <span class="event_date">Wed 30.11.2022 18:00 - 22:00 </span>
-                                        <a href="/wiki/ÖGS_MeetUp"> <span class="name">ÖGS Meet Up</span></a>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
+                        Loading...
                     </div>
                     <figcaption>Important events from our calendar. You can also visit <a
                             href='https://metalab.at/calendar/'>the dedicated calendar page</a> for future events.
@@ -278,6 +234,24 @@
     </div>
     <footer>©2022 Metalab. Created in <a href='http://vanilla-js.com/'>Vanilla JS</a>.</footer>
     <script>
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+        function createEventHtml(event) {
+            return `<li>
+                    <div>
+                        <p class="event">
+                            <span class="event_date">${escapeHtml(event.date)}</span>
+                            <a href="${encodeURIComponent(event.url)}"><span class="name">${escapeHtml(event.title)}</span></a>
+                            <span class="teaser">${escapeHtml(event.subtitle)}</span>
+                        </p>
+                    </div>
+                </li>`;
+        }
         window.addEventListener('DOMContentLoaded', () => {
             const video = document.querySelector('header > video');
             const playsymbol = document.querySelector('header > .playpause > .playsymbol');
@@ -291,6 +265,14 @@
                     video.pause();
                     playsymbol.style.display = 'block';
                     pausesymbol.style.display = 'none';
+                }
+            });
+            const calendarContent = document.querySelector('.calendar-content');
+            fetch('https://metalab.at/calendar/api/public_upcoming').then(async (response) => {
+                if (Math.floor(response.status / 100) === 2) {
+                    const json = await response.json();
+                    const events = json.map(createEventHtml);
+                    calendarContent.innerHTML = `<ul>${events.join('')}</ul>`;
                 }
             });
         });
