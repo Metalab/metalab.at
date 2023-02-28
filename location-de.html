@@ -46,7 +46,7 @@
         <nav aria-label="Main Navigation">
             <ul>
                 <li class="atomic"><img src="images/atomic.svg"
-                        alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
+                        alt="Metalab Logo: eine Telefonzelle, dahinter ein rutherfordsches Atommodell"></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rooms.html">Rooms</a></li>
                 <!-- <li><a href="events.html">Events</a></li> -->
@@ -63,25 +63,27 @@
                 <h3>Visit Us!</h3>
                 <div class="text">
                     <p>
-                        Metalab is located at <strong>Rathausstraße 6</strong> in the first district of Vienna, Austria,
-                        Europe.
+                        Das Metalab befindet sich in der Rathausstraße 6 im 1. Wiener Gemeindebezirk.
                     </p>
-                    <p>Vienna is not suitable for cars, so please come here using public transportation (in ascending
-                        order
-                        of walking distance):</p>
+                    <p>
+                        Das Metalab ist nicht gut per Auto erreichbar, deshalb empfehlen wir,
+                        die öffentlichen Verkehrsmittel der Stadt Wien zu verwenden.
+                        Die nächstgelegenen Haltestellen, sortiert in aufsteigender Gehweite, sind:
+                    </p>
                     <p>
                     <ul>
-                        <li>Metro lines U2 and U5, tram line 2 at station <em>Rathaus</em></li>
-                        <li>Tram lines U2Z, 1, 71, and D at station <em>Parlament</em></li>
-                        <li>Tram line 46 at station <em>Auerspergstraße</em></li>
-                        <li>Metro line U3 at station <em>Volkstheater</em></li>
-                        <li>Tram lines 37, 38, 40, 41, 42, 43, 44 station <em>Schottentor</em></li>
+                        <li>Ubahnlinien U2 und U5, Straßenbahnlinie 2 Haltestelle <em>Rathaus</em></li>
+                        <li>Straßenbahnlinien U2Z, 1, 71, und D Haltestelle <em>Parlament</em></li>
+                        <li>Straßenbahnlinie 46 Haltestelle <em>Auerspergstraße</em></li>
+                        <li>Ubahnlinie U3 Haltestelle <em>Volkstheater</em></li>
+                        <li>Straßenbahnlinien 37, 38, 40, 41, 42, 43 und 44 Haltestelle<em>Schottentor</em></li>
                     </ul>
                     </p>
-                    <p>Alternatively, there are also a few bicycle parking spots in the immediate vicinity.</p>
+                    <p>
+                        Alternativ gibt es auch einige Fahrradabstellplätze in unmittelbarer Nähe.
                 </div>
                 <figure>
-                    <iframe title="Interactive map showing the location of Metalab" frameborder="0" scrolling="no"
+                    <iframe title="Interaktive Karte die den Standort des Metalab zeigt" frameborder="0" scrolling="no"
                         marginheight="0" marginwidth="0"
                         src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
                         style="border: 1px solid black"></iframe>
@@ -94,22 +96,22 @@
     </div>
     <footer>©2022 Metalab. Created in <a href='http://vanilla-js.com/'>Vanilla JS</a>.</footer>
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const video = document.querySelector('header > video');
-            const playsymbol = document.querySelector('header > .playpause > .playsymbol');
-            const pausesymbol = document.querySelector('header > .playpause > .pausesymbol');
-            video.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                    playsymbol.style.display = 'none';
-                    pausesymbol.style.display = 'block';
-                } else {
-                    video.pause();
-                    playsymbol.style.display = 'block';
-                    pausesymbol.style.display = 'none';
-                }
-            });
-        });
+     window.addEventListener('DOMContentLoaded', () => {
+         const video = document.querySelector('header > video');
+         const playsymbol = document.querySelector('header > .playpause > .playsymbol');
+         const pausesymbol = document.querySelector('header > .playpause > .pausesymbol');
+         video.addEventListener('click', () => {
+             if (video.paused) {
+                 video.play();
+                 playsymbol.style.display = 'none';
+                 pausesymbol.style.display = 'block';
+             } else {
+                 video.pause();
+                 playsymbol.style.display = 'block';
+                 pausesymbol.style.display = 'none';
+             }
+         });
+     });
     </script>
 </body>
 
