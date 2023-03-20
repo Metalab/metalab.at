@@ -58,6 +58,26 @@
                 <li><a href="https://metalab.at/wiki/Impressum">Impressum</a></li>
                 <li><a href="rooms.html">🇬🇧</a></li>
                 <li><a href="#">🇦🇹</a></li>
+                <li>Tür ist <span id="door">???</span></li>
+                <!--determine door status-->
+                <script type="text/javascript">
+                    element = document.getElementById("door")
+                    url = "http://eingang.metalab.at/status.json"
+                    request =  new XMLHttpRequest()
+                    request.open("GET", url)
+                    request.send()
+                    element.style.backgroundColor = "#a5a511";
+                    request.onreadystatechange = (e) => {
+                        obj = JSON.parse(request.responseText)
+                        if (obj.status == "open"){
+                            element.innerHTML="AUF"
+                            element.style.backgroundColor="green"
+                        } else if (obj.status == "closed"){
+                            element.innerHTML="ZU";
+                            element.style.backgroundColor= "darkred";
+                        }
+                    }
+                 </script>
             </ul>
         </nav>
         <main>
