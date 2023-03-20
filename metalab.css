@@ -203,6 +203,7 @@ nav a.active {
 
 nav li {
   flex-grow: 0;
+  color: var(--color-1);
 }
 
 nav li.atomic {
@@ -217,6 +218,8 @@ nav li.atomic img {
 nav .spacer {
   flex-grow: 1;
 }
+
+
 
 main {
   width: 100%;
