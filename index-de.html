@@ -71,9 +71,10 @@
                         obj = JSON.parse(request.responseText)
                         if (obj.status == "open"){
                             element.innerHTML="AUF"
+                            element.style.backgroundColor="green"
                         } else if (obj.status == "closed"){
                             element.innerHTML="ZU";
-                            element.style.color= "#FF0000";
+                            element.style.backgroundColor= "darkred";
                         }
                     }
                  </script>
