@@ -22,7 +22,7 @@
             <img class="heading reducedmotion" src="images/header.webp" alt="Bild vom Eingang zum Metalab">
             <div class="playpause">
                 <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
                     <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C220.779,136.094,212.211,127.525,201.654,127.525z" />
                     <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
@@ -46,7 +46,7 @@
         <nav aria-label="Main Navigation">
             <ul>
                 <li class="atomic"><img src="images/atomic.svg"
-                         alt="Metalab Logo: eine Telefonzelle, dahinter ein rutherfordsches Atommodell"></li>
+                        alt="Metalab Logo: eine Telefonzelle, dahinter ein rutherfordsches Atommodell"></li>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="rooms-de.html">Räume</a></li>
                 <!-- <li><a href="events.html">Veranstaltungen</a></li> -->
@@ -62,22 +62,22 @@
                 <!--determine door status-->
                 <script type="text/javascript">
                     element = document.getElementById("door")
-                    url = "http://eingang.metalab.at/status.json"
-                    request =  new XMLHttpRequest()
+                    url = "https://eingang.c3w.at/status.json"
+                    request = new XMLHttpRequest()
                     request.open("GET", url)
                     request.send()
                     element.style.backgroundColor = "#a5a511";
                     request.onreadystatechange = (e) => {
                         obj = JSON.parse(request.responseText)
-                        if (obj.status == "open"){
-                            element.innerHTML="AUF"
-                            element.style.backgroundColor="green"
-                        } else if (obj.status == "closed"){
-                            element.innerHTML="ZU";
-                            element.style.backgroundColor= "darkred";
+                        if (obj.status == "open") {
+                            element.innerHTML = "AUF"
+                            element.style.backgroundColor = "green"
+                        } else if (obj.status == "closed") {
+                            element.innerHTML = "ZU";
+                            element.style.backgroundColor = "darkred";
                         }
                     }
-                 </script>
+                </script>
             </ul>
         </nav>
         <main>
@@ -117,7 +117,7 @@
                         öffentlich zugänglich und kostenlos. </p>
                 </div>
                 <img src="images/creativity.webp"
-                     alt="Eine Person, die vor einem Laptop sitzend an einer Analogkamera arbeitet">
+                    alt="Eine Person, die vor einem Laptop sitzend an einer Analogkamera arbeitet">
             </section>
             <section>
                 <h3>Veranstaltungen</h3>
@@ -130,7 +130,7 @@
                 <figure title="Der Metalab Kalender">
                     <div class="calendar-content"> Lade... </div>
                     <figcaption>Die kommenden Veranstaltungen aus unserem Kalender. Du kannst auch <a
-                           href='https://metalab.at/calendar/'>die eigene Kalenderseite</a> besuchen, um zukünftige
+                            href='https://metalab.at/calendar/'>die eigene Kalenderseite</a> besuchen, um zukünftige
                         Veranstaltungen zu finden. </figcaption>
                 </figure>
             </section>
@@ -141,7 +141,7 @@
                         Herkunft, Geschlecht, Sexualität, Einkommen oder Religion. Unser Ziel ist es, ein Umfeld zu
                         schaffen, das von gegenseitigem Respekt, Toleranz und Ermutigung geprägt ist. </p>
                     <p> Das Metalab arbeitet mit <a href="https://defineblind.at">Define</a> und <a
-                           href="https://machs-auf.at">MACH'S AUF!</a> zusammen um den Raum für gehörlose, blinde und
+                            href="https://machs-auf.at">MACH'S AUF!</a> zusammen um den Raum für gehörlose, blinde und
                         sehbehinderte Menschen zugänglicher zu machen. </p>
                     <p> Leider ist das Metalab nicht vollständig rollstuhlgerecht, am Eingang und vor der Toilette
                         befinden sich jeweils Stufen. </p>
@@ -150,7 +150,7 @@
                     <video muted playsinline controls poster="images/mach_s_auf_poster.webp">
                         <source src="videos/mach_s_auf_introduction_720p.mp4" type="video/mp4"> Du kannst die
                         gebärdensprachliche Vorstellung des Metalab auch <a
-                           href="https://www.youtube.com/watch?v=7S8ZVDvWld0">auf YouTube</a> ansehen.
+                            href="https://www.youtube.com/watch?v=7S8ZVDvWld0">auf YouTube</a> ansehen.
                     </video>
                     <figcaption aria-hidden="true">Vorstellung des Metalabs in ÖGS (Österreichischer Gebärdensprache).
                     </figcaption>
@@ -194,19 +194,19 @@
                             Day</a> vorbeikommen, an dem der Raum ausschließlich für Frauen, agender, inter-, non-binäre
                         und trans Menschen sowie für alle, die ihr Geschlecht noch in Frage stellen, geöffnet ist. </p>
                     <p> Wenn du Fragen hast, kontaktiere uns per E-Mail unter <a
-                           href='mailto:core@metalab.at'>core@metalab.at</a>, ruf uns unter <a
-                           href='tel:+43720002323'>+43 720 002323</a> an, oder besuche uns in der <strong>Rathausstraße
+                            href='mailto:core@metalab.at'>core@metalab.at</a>, ruf uns unter <a
+                            href='tel:+43720002323'>+43 720 002323</a> an, oder besuche uns in der <strong>Rathausstraße
                             6, 1010 Wien</strong>. </p>
                     <p> Du kannst dir auch die detaillierte Beschreibung auf der <a href='location-de.html'>Seite zum
                             Standort</a> ansehen. </p>
                 </div>
                 <figure>
                     <iframe title="Interaktive Karte die den Standort des Metalab zeigt" frameborder="0" scrolling="no"
-                            marginheight="0" marginwidth="0"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
-                            style="border: 1px solid black"></iframe>
+                        marginheight="0" marginwidth="0"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
+                        style="border: 1px solid black"></iframe>
                     <figcaption>Lageplan des Metalab [<a
-                           href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">Große
+                            href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">Große
                             Karte anzeigen</a>]</figcaption>
                 </figure>
             </section>
@@ -214,7 +214,7 @@
     </div>
     <footer>
         <p>©2022-2023 Metalab. Mit <a href='http://vanilla-js.com/'>Vanilla JS</a> erstellt.<a
-               href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Datenschutzerklärung</a>.</p>
+                href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Datenschutzerklärung</a>.</p>
     </footer>
     <script>
         function escapeHtml(str) {

@@ -22,7 +22,7 @@
             <img class="heading reducedmotion" src="images/header.webp" alt="Picture of the entrance to Metalab">
             <div class="playpause">
                 <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
                     <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C220.779,136.094,212.211,127.525,201.654,127.525z" />
                     <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
@@ -46,7 +46,7 @@
         <nav aria-label="Main Navigation">
             <ul>
                 <li class="atomic"><img src="images/atomic.svg"
-                         alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
+                        alt="Metalab Logo: a telephone booth in front of a Rutherford atomic model"></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rooms.html" class="active">Rooms</a></li>
                 <!-- <li><a href="events.html">Events</a></li> -->
@@ -62,22 +62,22 @@
                 <!--determine door status-->
                 <script type="text/javascript">
                     element = document.getElementById("door")
-                    url = "http://eingang.metalab.at/status.json"
-                    request =  new XMLHttpRequest()
+                    url = "https://eingang.c3w.at/status.json"
+                    request = new XMLHttpRequest()
                     request.open("GET", url)
                     request.send()
                     element.style.backgroundColor = "#a5a511";
                     request.onreadystatechange = (e) => {
                         obj = JSON.parse(request.responseText)
-                        if (obj.status == "open"){
-                            element.innerHTML="OPEN"
-                            element.style.backgroundColor="green"
-                        } else if (obj.status == "closed"){
-                            element.innerHTML="CLOSED";
-                            element.style.backgroundColor= "darkred";
+                        if (obj.status == "open") {
+                            element.innerHTML = "OPEN"
+                            element.style.backgroundColor = "green"
+                        } else if (obj.status == "closed") {
+                            element.innerHTML = "CLOSED";
+                            element.style.backgroundColor = "darkred";
                         }
                     }
-                 </script>
+                </script>
             </ul>
         </nav>
         <main>
@@ -110,7 +110,7 @@
                         audio system. </p>
                 </div>
                 <img src="images/library.webp"
-                     alt="The library with computer screens, projector and two people working on computers">
+                    alt="The library with computer screens, projector and two people working on computers">
             </section>
             <section>
                 <h3>Whatever Lab</h3>
@@ -185,13 +185,13 @@
                     <p> Gather drinks from our beverage fridge or ramen from our vending machine. </p>
                 </div>
                 <img src="images/kitchen_front.webp"
-                     alt="A glass-front fridge carrying beverages with a box of stacked ramen packages next to it">
+                    alt="A glass-front fridge carrying beverages with a box of stacked ramen packages next to it">
             </section>
         </main>
     </div>
     <footer>
         <p>©2022-2023 Metalab. Created in <a href='http://vanilla-js.com/'>Vanilla JS</a>.<a
-               href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Privacy policy</a>.</p>
+                href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Privacy policy</a>.</p>
     </footer>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
