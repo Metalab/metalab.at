@@ -42,6 +42,31 @@
                     c0,4.146,4.69,6.554,8.059,4.138l31.583-22.647C97.418,73.331,97.418,69.118,94.585,67.086z" />
                 </svg>
             </div>
+            <aside class='door-overlay'>Door is <span id="door">loading</span></aside>
+            <!--determine door status-->
+            <script type="text/javascript">
+                fetch("https://eingang.c3w.at/status.json").then((response) => {
+                    if (response.ok && Math.floor(response.status / 100) === 2) {
+                        return response.json();
+                    }
+                }).then((json) => {
+                    if (json) {
+                        const element = document.getElementById("door");
+                        if (json.status === "open") {
+                            element.innerHTML = "OPEN";
+                            element.classList.add('open');
+                            return;
+                        } else if (json.status === "closed") {
+                            element.innerHTML = "CLOSED";
+                            element.classList.add('closed');
+                            return;
+                        }
+                    }
+                    document.querySelector('.door-overlay').classList.add('failed');
+                }).catch(() => {
+                    document.querySelector('.door-overlay').classList.add('failed');
+                });
+            </script>
         </header>
         <nav aria-label="Main Navigation">
             <ul>
@@ -58,26 +83,6 @@
                 <li><a href="https://metalab.at/wiki/Impressum">Imprint</a></li>
                 <li><a href="#">🇬🇧</a></li>
                 <li><a href="location-de.html">🇦🇹</a></li>
-                <li>Door is <span id="door">???</span></li>
-                <!--determine door status-->
-                <script type="text/javascript">
-                    element = document.getElementById("door")
-                    url = "https://eingang.c3w.at/status.json"
-                    request = new XMLHttpRequest()
-                    request.open("GET", url)
-                    request.send()
-                    element.style.backgroundColor = "#a5a511";
-                    request.onreadystatechange = (e) => {
-                        obj = JSON.parse(request.responseText)
-                        if (obj.status == "open") {
-                            element.innerHTML = "OPEN"
-                            element.style.backgroundColor = "green"
-                        } else if (obj.status == "closed") {
-                            element.innerHTML = "CLOSED";
-                            element.style.backgroundColor = "darkred";
-                        }
-                    }
-                </script>
             </ul>
         </nav>
         <main>
