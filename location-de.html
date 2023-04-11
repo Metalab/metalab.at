@@ -22,7 +22,7 @@
             <img class="heading reducedmotion" src="images/header.webp" alt="Bild vom Eingang zum Metalab">
             <div class="playpause">
                 <svg class="pausesymbol" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 478.125 478.125">
                     <path d="M201.654,127.525h-31.9c-10.557,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
                 c10.557,0,19.125-8.645,19.125-19.125v-184.9C220.779,136.094,212.211,127.525,201.654,127.525z" />
                     <path d="M308.448,127.525h-31.9c-10.558,0-19.125,8.645-19.125,19.125v184.9c0,10.558,8.645,19.125,19.125,19.125h31.9
@@ -46,7 +46,7 @@
         <nav aria-label="Main Navigation">
             <ul>
                 <li class="atomic"><img src="images/atomic.svg"
-                         alt="Metalab Logo: eine Telefonzelle, dahinter ein rutherfordsches Atommodell"></li>
+                        alt="Metalab Logo: eine Telefonzelle, dahinter ein rutherfordsches Atommodell"></li>
                 <li><a href="index-de.html">Home</a></li>
                 <li><a href="rooms-de.html">Räume</a></li>
                 <!-- <li><a href="events.html">Veranstaltungen</a></li> -->
@@ -62,22 +62,22 @@
                 <!--determine door status-->
                 <script type="text/javascript">
                     element = document.getElementById("door")
-                    url = "http://eingang.metalab.at/status.json"
-                    request =  new XMLHttpRequest()
+                    url = "https://eingang.c3w.at/status.json"
+                    request = new XMLHttpRequest()
                     request.open("GET", url)
                     request.send()
                     element.style.backgroundColor = "#a5a511";
                     request.onreadystatechange = (e) => {
                         obj = JSON.parse(request.responseText)
-                        if (obj.status == "open"){
-                            element.innerHTML="AUF"
-                            element.style.backgroundColor="green"
-                        } else if (obj.status == "closed"){
-                            element.innerHTML="ZU";
-                            element.style.backgroundColor= "darkred";
+                        if (obj.status == "open") {
+                            element.innerHTML = "AUF"
+                            element.style.backgroundColor = "green"
+                        } else if (obj.status == "closed") {
+                            element.innerHTML = "ZU";
+                            element.style.backgroundColor = "darkred";
                         }
                     }
-                 </script>
+                </script>
             </ul>
         </nav>
         <main>
@@ -101,11 +101,11 @@
                 </div>
                 <figure>
                     <iframe title="Interaktive Karte die den Standort des Metalab zeigt" frameborder="0" scrolling="no"
-                            marginheight="0" marginwidth="0"
-                            src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
-                            style="border: 1px solid black"></iframe>
+                        marginheight="0" marginwidth="0"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=16.353868246078495%2C48.207976537426354%2C16.358374357223514%2C48.21106167125026&amp;layer=transportmap&amp;marker=48.20951912757066%2C16.356121301651"
+                        style="border: 1px solid black"></iframe>
                     <figcaption>Area Plan Around Metalab [<a
-                           href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
+                            href="https://www.openstreetmap.org/?mlat=48.20945&amp;mlon=16.35612#map=18/48.20945/16.35612&amp;layers=T">View
                             Larger Map</a>]</figcaption>
                 </figure>
             </section>
@@ -113,7 +113,7 @@
     </div>
     <footer>
         <p>©2022-2023 Metalab. Mit <a href='http://vanilla-js.com/'>Vanilla JS</a> erstellt.<a
-               href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Datenschutzerklärung</a>.</p>
+                href='https://metalab.at/wiki/Datenschutzerkl%C3%A4rung'>Datenschutzerklärung</a>.</p>
     </footer>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
