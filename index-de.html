@@ -46,7 +46,7 @@
             <!--determine door status-->
             <script type="text/javascript">
                 fetch("https://eingang.c3w.at/status.json").then((response) => {
-                    if (response.ok && Math.floor(response.status / 100) === 2) {
+                    if (response.ok) {
                         return response.json();
                     }
                 }).then((json) => {
@@ -257,7 +257,7 @@
             });
             const calendarContent = document.querySelector('.calendar-content');
             fetch('https://metalab.at/calendar/api/public_upcoming').then(async (response) => {
-                if (Math.floor(response.status / 100) === 2) {
+                if (response.ok) {
                     const json = await response.json();
                     const events = json.map(createEventHtml);
                     calendarContent.innerHTML = `<ul>${events.join('')}</ul>`;
