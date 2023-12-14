@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="metalab.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -43,30 +44,6 @@
                 </svg>
             </div>
             <aside class='door-overlay'>Tür ist <span id="door">ladend</span></aside>
-            <!--determine door status-->
-            <script type="text/javascript">
-                fetch("https://eingang.c3w.at/status.json").then((response) => {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                }).then((json) => {
-                    if (json) {
-                        const element = document.getElementById("door");
-                        if (json.status === "open") {
-                            element.innerHTML = "OFFEN";
-                            element.classList.add('open');
-                            return;
-                        } else if (json.status === "closed") {
-                            element.innerHTML = "GESCHLOSSEN";
-                            element.classList.add('closed');
-                            return;
-                        }
-                    }
-                    document.querySelector('.door-overlay').classList.add('failed');
-                }).catch(() => {
-                    document.querySelector('.door-overlay').classList.add('failed');
-                });
-            </script>
         </header>
         <nav aria-label="Main Navigation">
             <ul>
@@ -244,20 +221,6 @@
                 </li>`;
         }
         window.addEventListener('DOMContentLoaded', () => {
-            const video = document.querySelector('header > video');
-            const playsymbol = document.querySelector('header > .playpause > .playsymbol');
-            const pausesymbol = document.querySelector('header > .playpause > .pausesymbol');
-            video.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                    playsymbol.style.display = 'none';
-                    pausesymbol.style.display = 'block';
-                } else {
-                    video.pause();
-                    playsymbol.style.display = 'block';
-                    pausesymbol.style.display = 'none';
-                }
-            });
             const calendarContent = document.querySelector('.calendar-content');
             fetch('https://metalab.at/calendar/api/public_upcoming').then(async (response) => {
                 if (response.ok) {
