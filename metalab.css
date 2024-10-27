@@ -159,30 +159,37 @@ header>.reducedmotion {
   display: none;
 }
 
-header>.door-overlay {
+.status-flexbox {
+  display: grid;
   position: absolute;
-  right: 10px;
   top: 10px;
+  right: 10px;
+  gap: 10px;
+}
+
+.door-overlay, .labstatus-overlay {
   background-color: var(--color-1);
   font-size: 14pt;
   padding: 0.5em;
   box-shadow: 0 0 3px black;
+  cursor: help;
+  justify-self: end;
 }
 
-header>.door-overlay.failed {
+.door-overlay.failed, .labstatus-overlay.failed {
   display: none;
 }
 
-#door {
+#door, #labstatus {
   padding: 0.1em;
 }
 
-header>.door-overlay>.open {
+.door-overlay>.open, .labstatus-overlay>.open {
   background-color: var(--color-8);
   color: var(--color-2);
 }
 
-header>.door-overlay>.closed {
+.door-overlay>.closed, .labstatus-overlay>.closed {
   background-color: var(--color-3);
 }
 
