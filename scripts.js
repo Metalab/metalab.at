@@ -40,8 +40,20 @@ async function refreshLabStatus() {
     var hass_state = labstatus_json.state;
     var hass_last_changed_date = new Date(labstatus_json.last_changed_utc);
     var hass_last_updated_date = new Date(labstatus_json.last_updated_utc);
-    var hass_last_changed_date_formatted = hass_last_changed_date.toLocaleDateString() + ', ' + hass_last_changed_date.toLocaleTimeString();
-    var hass_last_updated_date_formatted = hass_last_updated_date.toLocaleDateString() + ', ' + hass_last_updated_date.toLocaleTimeString();
+
+    const date_options = {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZoneName: "short",
+    };
+
+    //return localized and formatted date
+    var hass_last_changed_date_formatted = new Intl.DateTimeFormat(undefined, date_options).format(hass_last_changed_date);
+    var hass_last_updated_date_formatted = new Intl.DateTimeFormat(undefined, date_options).format(hass_last_updated_date);
 
     if (hass_state === "on") {
         labstatusElem.innerHTML = STRINGS.open[selectedLang];
@@ -82,12 +94,24 @@ async function refreshDoorStatus() {
         throw new Error("Unexpected error status: " + res.status)
     }
 
-    const doorstatus_json = await res.json();
-    var hass_state = doorstatus_json.state;
-    var hass_last_changed_date = new Date(doorstatus_json.last_changed_utc);
-    var hass_last_updated_date = new Date(doorstatus_json.last_updated_utc);
-    var hass_last_changed_date_formatted = hass_last_changed_date.toLocaleDateString() + ', ' + hass_last_changed_date.toLocaleTimeString();
-    var hass_last_updated_date_formatted = hass_last_updated_date.toLocaleDateString() + ', ' + hass_last_updated_date.toLocaleTimeString();
+    const labstatus_json = await res.json();
+    var hass_state = labstatus_json.state;
+    var hass_last_changed_date = new Date(labstatus_json.last_changed_utc);
+    var hass_last_updated_date = new Date(labstatus_json.last_updated_utc);
+
+    const date_options = {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZoneName: "short",
+    };
+
+    //return localized and formatted date
+    var hass_last_changed_date_formatted = new Intl.DateTimeFormat(undefined, date_options).format(hass_last_changed_date);
+    var hass_last_updated_date_formatted = new Intl.DateTimeFormat(undefined, date_options).format(hass_last_updated_date);
 
     if (hass_state === "on") {
         doorElem.innerHTML = STRINGS.open[selectedLang];
