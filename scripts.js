@@ -172,3 +172,10 @@ video.addEventListener('click', () => {
         pausesymbol.style.display = 'none';
     }
 });
+
+// NAVBAR TOGGLE FUNCTIONALITY
+
+function toggleNavbar() {
+    const menu = document.querySelector('nav > ul');
+    menu.classList.toggle('show');
+}

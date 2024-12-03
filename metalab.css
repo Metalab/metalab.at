@@ -193,6 +193,7 @@ header>.reducedmotion {
   background-color: var(--color-3);
 }
 
+/* Navbar Styles */
 nav {
   position: sticky;
   top: 0;
@@ -200,18 +201,20 @@ nav {
   right: 0;
   background-color: var(--color-5);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 3px 3px black;
+  padding: 0.5em 1em;
+  z-index: 1000;
 }
 
-nav>ul {
+nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-
-  padding: 0.5em 1em;
+  justify-content: flex-start;
   width: 100%;
   max-width: var(--max-width);
   flex-wrap: wrap;
@@ -251,6 +254,58 @@ nav li.atomic img {
 
 nav .spacer {
   flex-grow: 1;
+}
+
+/* Button Styling */
+button.nmenu-toggle {
+  background: none;
+  border: none;
+  font-size: 2.5rem; 
+  color: var(--color-1);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  transition: background-color ease-in-out 0.2s;
+}
+
+button.nmenu-toggle::before {
+  display: none;
+}
+
+button.nmenu-toggle:hover {
+  color: var(--color-8); 
+}
+
+@media (max-width: 768px) {
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-5);
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  button.nmenu-toggle {
+    display: block;
+  }
+
+  nav > ul.show {
+    display: flex;
+  }
+
+  nav > ul > li {
+    text-align: center;
+    margin: 0.5em 0;
+  }
 }
 
 main {
